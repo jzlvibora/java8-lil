@@ -1,6 +1,6 @@
 package interfaces;
 
-public class Item implements Foldable {
+public class Item implements Foldable, Washable {
     private String name;
     private String brand;
 
@@ -27,6 +27,11 @@ public class Item implements Foldable {
 
     public void fold(){
         System.out.println("Folding my " + this.brand + " " +this.name);
+    }
+
+    @Override
+    public void wash() {
+        System.out.println("Washing " +name);
     }
 
     public static void main(String[] args) {
