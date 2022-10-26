@@ -1,0 +1,6 @@
+Requirements for Stream
+SOURCE - creates the stream
+TERMINAL - end result of the stream
+You cannot use a terminated stream
+-----------------------------
+Lazy Streams - without terminal operation and the intermediate operations are not executed
