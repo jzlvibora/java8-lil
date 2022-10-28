@@ -4,3 +4,20 @@ TERMINAL - end result of the stream
 You cannot use a terminated stream
 -----------------------------
 Lazy Streams - without terminal operation and the intermediate operations are not executed
+
+-----------------------------
+Terminal Operations
+-lazy streams are not executed until terminal operation is called on the stream
+-we need terminal operation to complete the stream pipeline
+-only one terminal operation can be called on a stream
+ex:forEach, min, count, max, allMatch, anyMatch, collect, noneMatch
+-forEach - returns void
+-min, max,count -> Optional<T> min(Comparator<?superT>comparator)
+-allMatch, anymatch, nonematch
+   -> boolean allMatch(Predicate<?super T> predicate)
+   -> boolean anyMatch(Predicate<?superT>predicate)
+   -> boolean noneMatch(Predicate<?superT>predicate)
+-collect - reduces the stream to one end result
+   -> <R,A> R collect(Collector<?superT,A,R>collector)
+-reduce -
+   -> Optional<T> reduce(BinaryOperator<T>accumulator)

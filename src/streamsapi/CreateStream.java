@@ -17,6 +17,7 @@ public class CreateStream {
         Stream<String> listStream = nameList.stream();
 
         //create stream using generate method
+        //genereates INFINITE stream of 5
         Stream<Integer> generateStream =Stream.generate(()->5);
 
         //create stream using iterate method
