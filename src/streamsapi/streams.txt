@@ -5,8 +5,10 @@ You cannot use a terminated stream
 -----------------------------
 Lazy Streams - without terminal operation and the intermediate operations are not executed
 
------------------------------
+
+============================
 Terminal Operations
+============================
 -lazy streams are not executed until terminal operation is called on the stream
 -we need terminal operation to complete the stream pipeline
 -only one terminal operation can be called on a stream
@@ -22,8 +24,10 @@ ex:forEach, min, count, max, allMatch, anyMatch, collect, noneMatch
 -reduce -
    -> Optional<T> reduce(BinaryOperator<T>accumulator)
 
-----------------------------------
+
+==============================
 Intermediate Operations
+==============================
 -operations between the source and terminal operation
 -multiple intermediate operations allowed on one stream
 -ex:filter, map, flatmap, peek, limit, skip, distinct, sorted
@@ -61,8 +65,10 @@ Intermediate Operations
    ->Stream<T>sorted(Comparator<?superT>comparator)
    -returns a stream that is (either by natural order opr using the specified comparator)
 
-   --------------------------------------
+
+  =====================================
    Parallel streams faster?
+  =====================================
    -Depends
    -parallel processing comes with cost
    -The work needs to be : split up, merged, memory managed
