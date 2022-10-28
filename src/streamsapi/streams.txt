@@ -60,3 +60,14 @@ Intermediate Operations
    ->Stream<T>sorted()
    ->Stream<T>sorted(Comparator<?superT>comparator)
    -returns a stream that is (either by natural order opr using the specified comparator)
+
+   --------------------------------------
+   Parallel streams faster?
+   -Depends
+   -parallel processing comes with cost
+   -The work needs to be : split up, merged, memory managed
+   When to use?
+   -When performance needs to be improved
+   -Lots of elements
+   -Heavy work on the stream
+   -order of execution is not important
