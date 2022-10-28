@@ -21,3 +21,42 @@ ex:forEach, min, count, max, allMatch, anyMatch, collect, noneMatch
    -> <R,A> R collect(Collector<?superT,A,R>collector)
 -reduce -
    -> Optional<T> reduce(BinaryOperator<T>accumulator)
+
+----------------------------------
+Intermediate Operations
+-operations between the source and terminal operation
+-multiple intermediate operations allowed on one stream
+-ex:filter, map, flatmap, peek, limit, skip, distinct, sorted
+
+-filter
+  ->Stream<T> filter(Predicate<?superT>predicate)
+  - returns a new stream without the elements that did not match the predicate
+
+-map
+  -><R> Stream<R> map(Function<?superT,?extends R>mapper);
+  - returns a new Stream with all the elements changed using the provided function
+
+-flatMap
+  -><R> Stream<R> flatMap(Function<?superT,?extends Stream<?extends R>>mapper)
+  -returns a stream with the elements of all collections on the stream, removing the collection layer(s)
+
+-peek
+  ->Stream<T>peek(Consumer<?superT>action)
+  -returns a stream with all the elements on the stream.The specified action will be executed for all elements
+
+-limit
+  ->Stream<T> limit(long maxSize)
+  -returns a stream with a specified number of elements
+
+-skip
+  ->Stream<T> skip(long n)
+  -return a stream with a specified number of elements skipped
+
+-distinct
+  ->Stream<T> distinct()
+  -returns a stream with only unique elements
+
+  -sorted
+   ->Stream<T>sorted()
+   ->Stream<T>sorted(Comparator<?superT>comparator)
+   -returns a stream that is (either by natural order opr using the specified comparator)

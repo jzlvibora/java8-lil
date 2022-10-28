@@ -47,5 +47,7 @@ public class TerminalOperations {
         Stream<Integer> iterateStream = Stream.iterate(1, x->x+2);
 
 
+
+
     }
 }
