@@ -29,5 +29,10 @@ Clock: abstract class that provides access to Instant, date , and time sing a ti
  -using duration and period to do calculations
  ==========================================
  Converting Date
+ ==========================================
+ Converting Calendar
+ 1.convert java. util.Calendar to Instant
+ 2.Get the zoneId from the Calendar
+ 3.Convert instant to LocalDateTime or ZoneDateTim,e using the ZoneId
 
 
